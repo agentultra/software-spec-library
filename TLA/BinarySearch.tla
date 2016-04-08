@@ -20,7 +20,7 @@ sortedSeqN(s, n) == UNION { {x \in [1..i -> s] : isSorted(x)} : i \in 0..n }
                       /\ \/ mid = -1
                          \/ mid \in DOMAIN lst);
         low := 1 || high := Len(lst);
-        main: while (low < high) {
+        main: while (low <= high) {
             mid := (low + high) \div 2;
             if (lst[mid] = a) {
                 retVal := "success";
